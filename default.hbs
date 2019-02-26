@@ -13,7 +13,12 @@
 <body>
 	{{{body}}}
 <script src="{{asset "js/zepto.min.js"}}"></script>
-<script src="{{asset "js/highlight.min.js"}}"></script>
+{{!-- <script src="{{asset "js/highlight.min.js"}}"></script> --}}
+{{!-- 引用的百度的 --}}
+ <link href="http://apps.bdimg.com/libs/highlight.js/9.1.0/styles/default.min.css" rel="stylesheet">
+<script src="http://apps.bdimg.com/libs/highlight.js/9.1.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 <script src="{{asset "js/skywalker.js"}}"></script>
 </body>
 </html>
