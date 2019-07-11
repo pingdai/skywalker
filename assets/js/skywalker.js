@@ -104,13 +104,13 @@ if( $('.page').hasClass('post') ){
 	$.ajax({
 		type: 'GET',
 		dataType: 'json',
-		url: 'https://img.ldsun.com/bing/random/3',
+		url: 'http://wallpaper.dpjeep.com/online-wallpaper/bing/wallpaper?idx=0&n=3',
 		success: function(result){
 			if( result && result.status ){
-				var bg = result.data[0];
+				var bg = result.data.data.results[0].url;
 					bg = 'url('+bg+')';
-				var pre = result.data[1];
-				var next = result.data[2];
+				var pre = result.data.data.results[1].url;
+				var next = result.data.data.results[2].url;
 				//nav-bg
 				$('.post header.nav-wrapper').css('background',bg+' center center / cover  no-repeat');
 				//pre/next post
