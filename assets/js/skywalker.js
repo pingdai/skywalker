@@ -107,6 +107,8 @@ if( $('.page').hasClass('post') ){
 		url: 'https://dpjeep.com/online-wallpaper/bing/wallpaper?idx=0&n=3',
 		success: function(result){
 			if( result && result.status ){
+				console.log(result)
+				console.log(result.data.data)
 				var bg = result.data.data.results[0].url;
 					bg = 'url('+bg+')';
 				var pre = result.data.data.results[1].url;
