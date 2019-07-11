@@ -104,7 +104,7 @@ if( $('.page').hasClass('post') ){
 	$.ajax({
 		type: 'GET',
 		dataType: 'json',
-		url: 'http://wallpaper.dpjeep.com/online-wallpaper/bing/wallpaper?idx=0&n=3',
+		url: 'http://dpjeep.com/online-wallpaper/bing/wallpaper?idx=0&n=3',
 		success: function(result){
 			if( result && result.status ){
 				var bg = result.data.data.results[0].url;
