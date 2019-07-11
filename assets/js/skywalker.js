@@ -106,13 +106,11 @@ if( $('.page').hasClass('post') ){
 		dataType: 'json',
 		url: 'https://dpjeep.com/online-wallpaper/bing/wallpaper?idx=0&n=3',
 		success: function(result){
-			if( result && result.status ){
-				console.log(result)
-				console.log(result.data.data)
-				var bg = result.data.data.results[0].url;
+			if( result && result.data ){
+				var bg = result.data.results[0].url;
 					bg = 'url('+bg+')';
-				var pre = result.data.data.results[1].url;
-				var next = result.data.data.results[2].url;
+				var pre = result.data.results[1].url;
+				var next = result.data.results[2].url;
 				//nav-bg
 				$('.post header.nav-wrapper').css('background',bg+' center center / cover  no-repeat');
 				//pre/next post
